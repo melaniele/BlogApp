@@ -1,0 +1,26 @@
+<div class="post-thumbnail">
+  <a [routerLink]="['/post', post._id]">
+    <img src="{{ post.featuredImage }}" alt="image" class="img-fluid" />
+  </a>
+</div>
+<div class="post-details">
+  <div class="date meta-last">{{ post.postDate | date:'mediumDate'}}</div>
+  <div class="category">
+    <a routerLink>{{ post.category }}</a>
+  </div>
+  <h3 class="h4" [routerLink]="['/post', post._id]">{{ post.title }}</h3>
+  <div class="text-muted" [innerHtml]="post.post"></div>
+  <div class="post-footer d-flex align-items-center">
+    <a routerLink="" class="author d-flex align-items-center flex-wrap"></a>
+    <div class="avatar">
+      <img src="/assets/img/user.svg" alt="..." class="img-fluid" />
+    </div>
+    <div class="title">
+      <span> {{ post.postedBy }} </span>
+    </div>
+    <div class="date"><i class="icon-clock"></i> {{ post.postDate | date:'mediumDate'}}</div>
+    <div class="comments meta-class">
+      <i class="icon-comment"></i>{{ post.comments.length }}
+    </div>
+  </div>
+</div>
