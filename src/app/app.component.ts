@@ -5,6 +5,7 @@
 * distributed to other students.
 * 
 * Name: Thi Hong Minh Le (Melanie) | Student ID: 103087201 | Date: April 14th, 2022
+* Vercel App link: https://blog-app-bice-pi.vercel.app/home
 *
 ********************************************************************************/ 
 import { Component } from '@angular/core';
