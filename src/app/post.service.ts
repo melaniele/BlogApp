@@ -9,8 +9,8 @@ const perPage = 6;
   providedIn: 'root',
 })
 export class PostService {
-  readonly url = 'https://blog-api-six-puce.vercel.app/';
-//'https://dry-stream-81044.herokuapp.com/api';
+  readonly url ='https://dry-stream-81044.herokuapp.com/api' ;
+//;'https://blog-api-six-puce.vercel.app/'
   constructor(private http: HttpClient) {}
 
   getPosts(page: any, tag: any, category: any): Observable<BlogPost[]> {
