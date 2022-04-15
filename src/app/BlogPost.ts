@@ -11,5 +11,5 @@ export class BlogPost {
   category: string;
   tags: Array<string>;
   isPrivate: Boolean;
-  views: number;
+  views: number
 }

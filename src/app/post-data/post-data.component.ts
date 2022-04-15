@@ -40,5 +40,4 @@ export class PostDataComponent implements OnInit {
       this.commentText = ""
     })
   }
-
 }
