@@ -23,7 +23,7 @@ export class PostService {
     return this.http
       .get<BlogPost[]>(`${this.url}/posts`, { params: params })
       .pipe(
-        catchError((err) => {
+        catchError((err: any) => {
           console.log('handling error', err);
           return throwError(err);
         })
@@ -32,7 +32,7 @@ export class PostService {
 
   getPostbyId(id: any): Observable<BlogPost> {
     return this.http.get<BlogPost>(`${this.url}/posts/${id}`).pipe(
-      catchError((err) => {
+      catchError((err: any) => {
         console.log('handling error', err);
         return throwError(err);
       })
@@ -41,7 +41,7 @@ export class PostService {
 
   getCategories(): Observable<any> {
     return this.http.get<any>(`${this.url}/categories`).pipe(
-      catchError((err) => {
+      catchError((err: any) => {
         console.log('handling error', err);
         return throwError(err);
       })
@@ -50,7 +50,7 @@ export class PostService {
 
   getTags(): Observable<string[]> {
     return this.http.get<string[]>(`${this.url}/tags`).pipe(
-      catchError((err) => {
+      catchError((err: any) => {
         console.log('handling error', err);
         return throwError(err);
       })
@@ -63,7 +63,7 @@ export class PostService {
         `${this.url}/posts?page=1&perPage=${Number.MAX_SAFE_INTEGER}`
       )
       .pipe(
-        catchError((err) => {
+        catchError((err: any) => {
           console.log('handling error', err);
           return throwError(err);
         })
