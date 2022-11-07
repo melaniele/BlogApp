@@ -9,7 +9,7 @@ const perPage = 6;
   providedIn: 'root',
 })
 export class PostService {
-  readonly url = 'https://dry-stream-81044.herokuapp.com/api';
+  readonly url = 'https://mel-blog-api.herokuapp.com/api';
   
   constructor(private http: HttpClient) {}
 
